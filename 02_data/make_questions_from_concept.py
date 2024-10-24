@@ -114,7 +114,8 @@ def make_make_questions_prompts(concepts):
 
 
 def make_make_questions_prompt(concept):
-    prompt = "You are an expert marathi teacher.\n"
+    prompt = "<|start_header_id|>user<|end_header_id|>"
+    prompt += "You are an expert marathi teacher.\n"
     prompt += "Consider the following notes explanaing several concepts.\n"
     prompt += "==============================\n"
     prompt += concept["description"] + "\n"
@@ -132,6 +133,7 @@ def make_make_questions_prompt(concept):
     prompt += "Ask the questions in marathi.\n"
     prompt += "Format your response as a JSON object with the following schema:\n"
     prompt += '{ "explanation": "explanation of how you wrote the questions", "question": list(str) }'
+    prompt += "<|eot_id|><|start_header_id|>assistant<|end_header_id|>"
 
     return prompt
 
@@ -174,7 +176,8 @@ def make_answer_questions_prompts(questions):
     return prompts
 
 def make_answer_questions_prompt(question):
-    prompt = "You are an expert marathi teacher.\n"
+    prompt = "<|start_header_id|>user<|end_header_id|>"
+    prompt += "You are an expert marathi teacher.\n"
     prompt += "Consider the following notes explanaing several concepts.\n"
     prompt += "==============================\n"
     prompt += question["description"] + "\n"
@@ -193,6 +196,7 @@ def make_answer_questions_prompt(question):
     prompt += "Answer the question in marathi.\n"
     prompt += "Format your response as a JSON object with the following schema:\n"
     prompt += '{ "explanation": "str", "answer": "str" }'
+    prompt += "<|eot_id|><|start_header_id|>assistant<|end_header_id|>"
 
     return prompt
 

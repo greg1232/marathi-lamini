@@ -6,6 +6,8 @@ Consider the following example:
 
 Me greg aahey.  Means I am greg.
 
+Maaza nav greg aahey.
+
 ## kaahee naahee - nothing
 
 The phrase kaahee naahee is used to mean 'nothing' in Marathi.
@@ -79,3 +81,10 @@ Globe var ek Bird aahey .
 Table khalee Bag aahey .
 
 Chair var kahee nahee aahey.
+
+# Ho vs Hoy
+
+# Nav - name
+
+
+
